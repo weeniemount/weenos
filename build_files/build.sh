@@ -10,7 +10,7 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y --skip-broken tmux fastfetch htop cowsay feh ffplay pkill plasma-workspace-x11 distrobox zsh fish
+dnf5 install -y --skip-broken tmux fastfetch htop cowsay feh ffplay pkill plasma-workspace-x11 distrobox zsh fish mpv
 dnf5 remove -y firefox
 
 # Use a COPR Example:
