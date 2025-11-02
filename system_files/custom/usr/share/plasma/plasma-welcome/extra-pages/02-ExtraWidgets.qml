@@ -10,8 +10,8 @@ import org.kde.plasma.welcome.private as Private
 Welcome.Page {
     id: root
 
-    heading: i18nc("@title:window", "Enjoy the dancing h thats below")
-    description: xi18nc("@info:usagetip", "h")
+    heading: i18nc("@title:window", "Extra Widgets")
+    description: xi18nc("@info:usagetip", "unlike base kinoite, weenOS comes with a google balls widget, weenie widget, dancing h widget, and, of course, the bouncy ball widget! oh yeah, maxwell the cat is here too!\nyou can see em all in action below")
 
     ColumnLayout {
         anchors.fill: parent
@@ -26,7 +26,7 @@ Welcome.Page {
 
             fillMode: Image.PreserveAspectFit
             mipmap: true
-            source: "/usr/weenos/welcomecenter/h.gif"
+            source: "/usr/weenos/welcomecenter/widgets.png"
         }
     }
 }
