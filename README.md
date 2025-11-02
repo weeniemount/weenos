@@ -1,7 +1,6 @@
-# weenOS
-previously known as google balls os
-
-a WIP fedora 43 atomic ublue image
+<img src="https://github.com/weeniemount/weenos/blob/master/system_files/overrides/usr/share/pixmaps/fedora-gdm-logo.png" width=300>
+<hr>
+previously known as google balls os, my own fedora 43 atomic ublue image!
 
 the iso (with all the apps) is built in https://github.com/weeniemount/weenos-iso
 
