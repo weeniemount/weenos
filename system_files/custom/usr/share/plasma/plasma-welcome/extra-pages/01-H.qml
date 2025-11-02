@@ -13,14 +13,6 @@ Welcome.Page {
     heading: i18nc("@title:window", "Enjoy the dancing h thats below")
     description: xi18nc("@info:usagetip", "h")
 
-    actions: [
-        Kirigami.Action {
-            icon.name: "favorite-symbolic"
-            text: i18nc("@action:button", "Supporting Members")
-            onTriggered: pageStack.layers.push(supporters)
-        }
-    ]
-
     ColumnLayout {
         anchors.fill: parent
 
