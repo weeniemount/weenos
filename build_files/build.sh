@@ -58,6 +58,7 @@ QUALIFIED_KERNEL="$(dnf5 repoquery --installed --queryformat='%{evr}.%{arch}' "k
 chmod 0600 /usr/lib/modules/"$QUALIFIED_KERNEL"/initramfs.img
 
 # install app image launcher
+mkdir -p /opt/appimagelauncher.AppDir
 curl -L -o /tmp/appimagelauncher.rpm \
   https://github.com/TheAssassin/AppImageLauncher/releases/download/v3.0.0-beta-3/appimagelauncher_3.0.0-beta-2-gha287.96cb937_x86_64.rpm
 dnf5 install -y /tmp/appimagelauncher.rpm
