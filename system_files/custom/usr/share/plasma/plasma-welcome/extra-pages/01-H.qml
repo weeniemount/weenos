@@ -34,11 +34,7 @@ Welcome.Page {
 
             fillMode: Image.PreserveAspectFit
             mipmap: true
-            source: "/usr/share/weenos/h.gif"
-        }
-
-        Private.ContributionCard {
-            Layout.fillWidth: true
+            source: "/usr/weenos/h.gif"
         }
     }
 }
