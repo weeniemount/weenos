@@ -76,6 +76,13 @@ fi
 
 # copy binaries to system paths
 if [ -d usr/bin ]; then
+  for script in usr/bin/AppImageLauncher usr/bin/AppImageLauncherSettings usr/bin/appimagelauncherd; do
+    if [ -f "$script" ]; then
+      sed -i 's|this_dir="/opt/appimagelauncher.AppDir"|this_dir="/usr/share/AppImageLauncher.AppDir"|g' "$script"
+      sed -i 's|/opt/appimagelauncher.AppDir|/usr/share/AppImageLauncher.AppDir|g' "$script"
+    fi
+  done
+  # now copy the fixed scripts
   cp usr/bin/* /usr/bin/ 2>/dev/null || true
 fi
 
