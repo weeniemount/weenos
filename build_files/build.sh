@@ -58,8 +58,24 @@ QUALIFIED_KERNEL="$(dnf5 repoquery --installed --queryformat='%{evr}.%{arch}' "k
 chmod 0600 /usr/lib/modules/"$QUALIFIED_KERNEL"/initramfs.img
 
 # install app image launcher
-mkdir -p /opt/appimagelauncher.AppDir
 curl -L -o /tmp/appimagelauncher.rpm \
   https://github.com/TheAssassin/AppImageLauncher/releases/download/v3.0.0-beta-3/appimagelauncher_3.0.0-beta-2-gha287.96cb937_x86_64.rpm
-dnf5 install -y /tmp/appimagelauncher.rpm
+
+# extract manually because idk it doesnt wanna install
+cd /
+rpm2cpio /tmp/appimagelauncher.rpm | cpio -idmv
+
+# manually install desktop files for start menu integration
+if [ -d /opt/appimagelauncher.AppDir/usr/share/applications ]; then
+  cp -r /opt/appimagelauncher.AppDir/usr/share/applications/* /usr/share/applications/
+fi
+
+# copy icons if they exist
+if [ -d /opt/appimagelauncher.AppDir/usr/share/icons ]; then
+  cp -r /opt/appimagelauncher.AppDir/usr/share/icons/* /usr/share/icons/
+fi
+
+# update desktop database
+update-desktop-database /usr/share/applications/ || true
+
 rm -f /tmp/appimagelauncher.rpm
