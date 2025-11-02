@@ -21,12 +21,6 @@ Welcome.Page {
         }
     ]
 
-    Component {
-        id: supporters
-
-        Supporters {}
-    }
-
     ColumnLayout {
         anchors.fill: parent
 

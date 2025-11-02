@@ -4,7 +4,7 @@ Type=Application
 
 # Required; becomes the first paragraph on the Welcome page
 # Don't forget to offer translations of the text!
-Name=Welcome to weenOS™™™™™™™™™™™™™™™™™™™™\nthis is one of the os'es of all time. uhhh idk what to write here.\n\nyou are running kde plasma btw and its a peak desktop
+Name=Welcome to weenOS™™™™™™™™™™™™™™™™™™™™\nthis is one of the os'es of all time. uhhh idk what to write here. read the stuff below
 
 # Optional; replaces the default image on the Welcome page
 # can be an icon name or an absolute path to an image on disk beginning with file:/
