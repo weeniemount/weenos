@@ -61,21 +61,48 @@ chmod 0600 /usr/lib/modules/"$QUALIFIED_KERNEL"/initramfs.img
 curl -L -o /tmp/appimagelauncher.rpm \
   https://github.com/TheAssassin/AppImageLauncher/releases/download/v3.0.0-beta-3/appimagelauncher_3.0.0-beta-2-gha287.96cb937_x86_64.rpm
 
-# extract manually because idk it doesnt wanna install
-cd /
+# create a temporary extraction directory
+mkdir -p /tmp/appimagelauncher-extract
+cd /tmp/appimagelauncher-extract
+
+# extract the RPM
 rpm2cpio /tmp/appimagelauncher.rpm | cpio -idmv
 
-# manually install desktop files for start menu integration
-if [ -d /opt/appimagelauncher.AppDir/usr/share/applications ]; then
-  cp -r /opt/appimagelauncher.AppDir/usr/share/applications/* /usr/share/applications/
+# move the AppDir to a safe location
+mkdir -p /usr/share
+if [ -d opt/appimagelauncher.AppDir ]; then
+  mv opt/appimagelauncher.AppDir /usr/share/AppImageLauncher.AppDir
 fi
 
-# copy icons if they exist
-if [ -d /opt/appimagelauncher.AppDir/usr/share/icons ]; then
-  cp -r /opt/appimagelauncher.AppDir/usr/share/icons/* /usr/share/icons/
+# copy binaries to system paths
+if [ -d usr/bin ]; then
+  cp -r usr/bin/* /usr/bin/
+fi
+
+# copy libraries
+if [ -d usr/lib ]; then
+  cp -r usr/lib/* /usr/lib/
+fi
+
+# install desktop files
+if [ -d usr/share/applications ]; then
+  cp usr/share/applications/* /usr/share/applications/
+fi
+
+# copy icons
+if [ -d usr/share/icons ]; then
+  cp -r usr/share/icons/* /usr/share/icons/
+fi
+
+# copy mime packages
+if [ -d usr/share/mime ]; then
+  cp -r usr/share/mime/* /usr/share/mime/
 fi
 
 # update desktop database
-update-desktop-database /usr/share/applications/ || true
+update-desktop-database /usr/share/applications/ 2>/dev/null || true
 
+# cleanup
+cd /
+rm -rf /tmp/appimagelauncher-extract
 rm -f /tmp/appimagelauncher.rpm
