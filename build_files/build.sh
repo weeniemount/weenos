@@ -76,27 +76,27 @@ fi
 
 # copy binaries to system paths
 if [ -d usr/bin ]; then
-  cp -r usr/bin/* /usr/bin/
+  cp usr/bin/* /usr/bin/ 2>/dev/null || true
 fi
 
 # copy libraries
 if [ -d usr/lib ]; then
-  cp -r usr/lib/* /usr/lib/
+  cp -r usr/lib/* /usr/lib/ 2>/dev/null || true
 fi
 
 # install desktop files
-if [ -d usr/share/applications ]; then
-  cp usr/share/applications/* /usr/share/applications/
+if [ -d /usr/share/AppImageLauncher.AppDir/usr/share/applications ]; then
+  cp /usr/share/AppImageLauncher.AppDir/usr/share/applications/* /usr/share/applications/ 2>/dev/null || true
 fi
 
 # copy icons
-if [ -d usr/share/icons ]; then
-  cp -r usr/share/icons/* /usr/share/icons/
+if [ -d /usr/share/AppImageLauncher.AppDir/usr/share/icons ]; then
+  cp -r /usr/share/AppImageLauncher.AppDir/usr/share/icons/* /usr/share/icons/ 2>/dev/null || true
 fi
 
 # copy mime packages
 if [ -d usr/share/mime ]; then
-  cp -r usr/share/mime/* /usr/share/mime/
+  cp -r usr/share/mime/* /usr/share/mime/ 2>/dev/null || true
 fi
 
 # update desktop database
