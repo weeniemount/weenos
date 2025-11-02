@@ -10,7 +10,7 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y --skip-broken tmux fastfetch htop cowsay feh ffplay pkill plasma-workspace-x11 distrobox zsh fish mpv
+dnf5 install -y --skip-broken tmux fastfetch htop cowsay feh ffplay pkill plasma-workspace-x11 distrobox zsh fish mpv btop fira-code-fonts jetbrains-mono-fonts
 dnf5 remove -y firefox
 
 # Use a COPR Example:
@@ -113,3 +113,8 @@ update-desktop-database /usr/share/applications/ 2>/dev/null || true
 cd /
 rm -rf /tmp/appimagelauncher-extract
 rm -f /tmp/appimagelauncher.rpm
+
+# another widget, by me
+git clone https://github.com/weeniemount/bouncyball-kde-6 /tmp/ball
+mv /tmp/ball/src/org.kde.plasma.bouncyball/ /usr/share/plasma/plasmoids/
+rm -rf /tmp/ball
