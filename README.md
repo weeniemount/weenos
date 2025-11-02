@@ -1,12 +1,14 @@
 <img src="https://github.com/weeniemount/weenos/blob/master/system_files/overrides/usr/share/pixmaps/fedora-gdm-logo.png" width=300>
 <hr>
+<img width="1294" height="819" alt="image" src="https://github.com/user-attachments/assets/0c6284ca-1805-46b1-b50f-54415b006b75" />
+
 previously known as google balls os, my own fedora 43 atomic ublue image!
 
 the iso (with all the apps) is built in https://github.com/weeniemount/weenos-iso
 
 basically this is just a joke meme os and isnt really meant for serious daily use but you can install it wherever idc
 
-cursor_pack_pngs/ isnt built into weenOS, its just a place where i can put the png files of the cursor packs
+misc/ isnt built into weenOS, its just a place where i can put the original files of the cursor packs and wallpaper of weenOS
 
 # credits
 kde plasma made by the, well, kde plasma devs
