@@ -13,7 +13,7 @@ misc/ isnt built into weenOS, its just a place where i can put the original file
 # credits
 kde plasma made by the, well, kde plasma devs
 
-fedora also made by the fedoa devs
+fedora also made by the fedora devs
 
 ublue for making it possible to make my funny os
 
