@@ -114,7 +114,8 @@ cd /
 rm -rf /tmp/appimagelauncher-extract
 rm -f /tmp/appimagelauncher.rpm
 
-# another widget, by me
-git clone https://github.com/weeniemount/bouncyball-kde-6 /tmp/ball
-mv /tmp/ball/src/org.kde.plasma.bouncyball/ /usr/share/plasma/plasmoids/
+# new bouncy ball widget for kde plasma 6
+git clone https://invent.kde.org/filipf/bouncy-ball /tmp/ball
+mkdir -p /usr/share/plasma/plasmoids/org.kde.plasma.bouncyball
+mv /tmp/ball/package/* /usr/share/plasma/plasmoids/org.kde.plasma.bouncyball/
 rm -rf /tmp/ball
