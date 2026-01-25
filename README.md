@@ -24,3 +24,5 @@ wilversings for making the kde maxwell widget that i clone into weenOS during bu
 https://www.gnome-look.org/p/2112595 for being the base of the custom plymouth theme
 
 bazzite devs from which i borrowed some fixes like rebuilding the initramfs for the plymouth theme and the fedora 43 SDDM fix
+
+Filip Fila for making the new bouncy ball kde 6 widget at https://invent.kde.org/filipf/bouncy-ball/
