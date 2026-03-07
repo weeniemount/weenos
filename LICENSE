@@ -1,3 +1,5 @@
+citizens from the state of California and Colorado are not authorized to use weenOS on their personal computers due to the law https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB1043 that was passed that requires weenOS and other operating systems to implement age verification, removing privacy aswell as making a big hassle out of everything.
+effective January 1st 2027 and onwards.
                                  Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
@@ -186,7 +188,7 @@
       same "printed page" as the copyright notice for easier
       identification within third-party archives.
 
-   Copyright [yyyy] [name of copyright owner]
+   Copyright 2026 weeniemount
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
